@@ -74,7 +74,7 @@ gift.onclick=()=>{
       setTimeout(type,d);
    }else{
       out.classList.add("done");
-      setTimeout(()=>thanks.style.display="block",2000);
+      setTimeout(()=>{thanks.style.display='block';setTimeout(()=>{document.getElementById('ending').classList.add('show');for(let i=0;i<5;i++){setTimeout(()=>{const m=document.createElement('div');m.className='meteor';m.textContent='☄️';m.style.top=(10+Math.random()*35)+'vh';m.style.left='105vw';document.body.appendChild(m);setTimeout(()=>m.remove(),2600);},i*900);}},2500);},2000);
    }
  }
  type();
