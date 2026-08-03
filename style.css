@@ -1,0 +1,51 @@
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#060816;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;overflow:hidden}.bg{position:fixed;inset:0;background:radial-gradient(circle at 20% 30%,rgba(0,255,255,.18),transparent 40%),radial-gradient(circle at 80% 10%,rgba(128,0,255,.18),transparent 35%),#060816;animation:a 8s ease-in-out infinite alternate}.card{position:relative;z-index:2;width:min(92%,500px);padding:24px;border-radius:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);text-align:center}.gift{font-size:90px;cursor:not-allowed;filter:grayscale(1);transition:.5s}.ready{cursor:pointer;filter:none;animation:pulse 2s infinite}.open{transform:scale(1.2) rotate(8deg)}.letter{display:none;margin-top:20px}.show{display:block;animation:fade .8s}.count{font-size:18px}@keyframes pulse{50%{transform:translateY(-8px)}}@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1}}@keyframes a{to{filter:hue-rotate(50deg)}}
+#typing::after{content:'|';animation:blink .8s infinite}#typing.done::after{content:''}@keyframes blink{50%{opacity:0}}
+.gift{position:relative;width:120px;height:120px;margin:20px auto;display:flex;align-items:center;justify-content:center}
+#giftIcon,#envelope{position:absolute;font-size:90px;transition:all .8s ease}
+#envelope{opacity:0;transform:scale(.6) rotate(-8deg)}
+.gift.transform #giftIcon{opacity:0;transform:scale(.4) rotate(25deg)}
+.gift.transform #envelope{opacity:1;transform:scale(1) rotate(0)}
+
+.stars{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.st{position:absolute;animation:twinkle 2.5s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+.s1{top:7%;left:13%;font-size:16px;animation-duration:3s;animation-delay:0.4s}
+.s2{top:14%;left:26%;font-size:20px;animation-duration:4s;animation-delay:0.8s}
+.s3{top:21%;left:39%;font-size:24px;animation-duration:5s;animation-delay:1.2000000000000002s}
+.s4{top:28%;left:52%;font-size:12px;animation-duration:6s;animation-delay:1.6s}
+.s5{top:35%;left:65%;font-size:16px;animation-duration:2s;animation-delay:2.0s}
+.s6{top:42%;left:78%;font-size:20px;animation-duration:3s;animation-delay:2.4000000000000004s}
+.s7{top:49%;left:91%;font-size:24px;animation-duration:4s;animation-delay:0.0s}
+.s8{top:56%;left:7%;font-size:12px;animation-duration:5s;animation-delay:0.4s}
+.s9{top:63%;left:20%;font-size:16px;animation-duration:6s;animation-delay:0.8s}
+.s10{top:70%;left:33%;font-size:20px;animation-duration:2s;animation-delay:1.2000000000000002s}
+.s11{top:77%;left:46%;font-size:24px;animation-duration:3s;animation-delay:1.6s}
+.s12{top:84%;left:59%;font-size:12px;animation-duration:4s;animation-delay:2.0s}
+.s13{top:91%;left:72%;font-size:16px;animation-duration:5s;animation-delay:2.4000000000000004s}
+.s14{top:3%;left:85%;font-size:20px;animation-duration:6s;animation-delay:0.0s}
+.s15{top:10%;left:1%;font-size:24px;animation-duration:2s;animation-delay:0.4s}
+.s16{top:17%;left:14%;font-size:12px;animation-duration:3s;animation-delay:0.8s}
+.s17{top:24%;left:27%;font-size:16px;animation-duration:4s;animation-delay:1.2000000000000002s}
+.s18{top:31%;left:40%;font-size:20px;animation-duration:5s;animation-delay:1.6s}
+.s19{top:38%;left:53%;font-size:24px;animation-duration:6s;animation-delay:2.0s}
+.s20{top:45%;left:66%;font-size:12px;animation-duration:2s;animation-delay:2.4000000000000004s}
+.s21{top:52%;left:79%;font-size:16px;animation-duration:3s;animation-delay:0.0s}
+.s22{top:59%;left:92%;font-size:20px;animation-duration:4s;animation-delay:0.4s}
+.s23{top:66%;left:8%;font-size:24px;animation-duration:5s;animation-delay:0.8s}
+.s24{top:73%;left:21%;font-size:12px;animation-duration:6s;animation-delay:1.2000000000000002s}
+.s25{top:80%;left:34%;font-size:16px;animation-duration:2s;animation-delay:1.6s}
+.s26{top:87%;left:47%;font-size:20px;animation-duration:3s;animation-delay:2.0s}
+.s27{top:94%;left:60%;font-size:24px;animation-duration:4s;animation-delay:2.4000000000000004s}
+.s28{top:6%;left:73%;font-size:12px;animation-duration:5s;animation-delay:0.0s}
+.s29{top:13%;left:86%;font-size:16px;animation-duration:6s;animation-delay:0.4s}
+.s30{top:20%;left:2%;font-size:20px;animation-duration:2s;animation-delay:0.8s}
+.s31{top:27%;left:15%;font-size:24px;animation-duration:3s;animation-delay:1.2000000000000002s}
+.s32{top:34%;left:28%;font-size:12px;animation-duration:4s;animation-delay:1.6s}
+.s33{top:41%;left:41%;font-size:16px;animation-duration:5s;animation-delay:2.0s}
+.s34{top:48%;left:54%;font-size:20px;animation-duration:6s;animation-delay:2.4000000000000004s}
+.s35{top:55%;left:67%;font-size:24px;animation-duration:2s;animation-delay:0.0s}
+.s36{top:62%;left:80%;font-size:12px;animation-duration:3s;animation-delay:0.4s}
+.s37{top:69%;left:93%;font-size:16px;animation-duration:4s;animation-delay:0.8s}
+.s38{top:76%;left:9%;font-size:20px;animation-duration:5s;animation-delay:1.2000000000000002s}
+.s39{top:83%;left:22%;font-size:24px;animation-duration:6s;animation-delay:1.6s}
+.s40{top:90%;left:35%;font-size:12px;animation-duration:2s;animation-delay:2.0s}
