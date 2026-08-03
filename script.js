@@ -74,37 +74,8 @@ gift.onclick=()=>{
       setTimeout(type,d);
    }else{
       out.classList.add("done");
-      setTimeout(()=>{
-      thanks.style.display="block";
-      setTimeout(()=>{
-        document.getElementById("ending").classList.add("show");
-        launchFireworks();
-        for(let i=0;i<35;i++){
-          const h=document.createElement("div");
-          h.className="heart";
-          h.textContent=Math.random()>0.5?"💖":"🤍";
-          h.style.left=Math.random()*100+"vw";
-          h.style.animationDelay=Math.random()*3+"s";
-          document.getElementById("hearts").appendChild(h);
-        }
-      },2500);
-    },2000);
+      setTimeout(()=>{thanks.style.display='block';setTimeout(()=>{document.getElementById('ending').classList.add('show');for(let i=0;i<5;i++){setTimeout(()=>{const m=document.createElement('div');m.className='meteor';m.textContent='☄️';m.style.top=(10+Math.random()*35)+'vh';m.style.left='105vw';document.body.appendChild(m);setTimeout(()=>m.remove(),2600);},i*900);}},2500);},2000);
    }
  }
  type();
 };
-
-
-function launchFireworks(){
-const canvas=document.getElementById("fireworks");
-const ctx=canvas.getContext("2d");
-canvas.width=innerWidth;canvas.height=innerHeight;
-let particles=[];
-for(let i=0;i<180;i++)particles.push({x:canvas.width/2,y:canvas.height/2,vx:(Math.random()-.5)*12,vy:(Math.random()-.5)*12,r:2+Math.random()*3,life:100});
-(function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`hsl(${Math.random()*360},100%,60%)`;ctx.fill();p.x+=p.vx;p.y+=p.vy;p.vy+=.04;p.life--;});
-particles=particles.filter(p=>p.life>0);
-if(particles.length)requestAnimationFrame(animate);
-})();
-}
