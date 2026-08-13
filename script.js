@@ -1,5 +1,8 @@
 const birthdayDate = new Date("2026-08-21T00:00:00");
 
+const previewMode =
+  new URLSearchParams(window.location.search).get("preview") === "1";
+
 const giftButton = document.getElementById("giftButton");
 const messageSection = document.getElementById("messageSection");
 const typedMessage = document.getElementById("typedMessage");
@@ -54,6 +57,18 @@ function updateCountdown() {
   const now = new Date();
   const difference = birthdayDate - now;
 
+  // PREVIEW MODE
+  if (previewMode) {
+
+    statusEl.textContent = "👀 Preview mode";
+
+    giftButton.disabled = false;
+    giftButton.classList.add("ready");
+
+    return;
+  }
+
+  // COUNTDOWN SELESAI
   if (difference <= 0) {
 
     statusEl.textContent =
@@ -64,9 +79,13 @@ function updateCountdown() {
     minutesEl.textContent = "00";
     secondsEl.textContent = "00";
 
+    giftButton.disabled = false;
+    giftButton.classList.add("ready");
+
     return;
   }
 
+  // COUNTDOWN MASIH BERJALAN
   const days = Math.floor(
     difference / 86400000
   );
@@ -87,6 +106,12 @@ function updateCountdown() {
   hoursEl.textContent = pad(hours);
   minutesEl.textContent = pad(minutes);
   secondsEl.textContent = pad(seconds);
+
+  statusEl.textContent =
+    "Menuju hari spesial...";
+
+  giftButton.disabled = true;
+  giftButton.classList.remove("ready");
 }
 
 updateCountdown();
