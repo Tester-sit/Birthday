@@ -1,9 +1,9 @@
 const birthdayDate = new Date("2026-08-21T00:00:00");
 
-const previewMode =
-  new URLSearchParams(window.location.search).get("preview") === "1";
-
 const giftButton = document.getElementById("giftButton");
+
+const previewMode = 
+  new URLSearchParams(window.location.search).get("preview") === "1";
 const messageSection = document.getElementById("messageSection");
 const typedMessage = document.getElementById("typedMessage");
 const finalMessage = document.getElementById("finalMessage");
@@ -108,10 +108,16 @@ function updateCountdown() {
   secondsEl.textContent = pad(seconds);
 
   statusEl.textContent =
-    "Menuju hari spesial...";
+  "Menuju hari spesial...";
 
-  giftButton.disabled = true;
+// Tombol hanya terkunci jika bukan preview
+giftButton.disabled = !previewMode;
+
+if (previewMode) {
+  giftButton.classList.add("ready");
+} else {
   giftButton.classList.remove("ready");
+}
 }
 
 updateCountdown();
