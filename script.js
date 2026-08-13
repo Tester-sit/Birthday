@@ -1,4 +1,4 @@
-const birthdayDate = new Date("2026-08-07T00:00:00");
+const birthdayDate = new Date("2026-08-21T00:00:00");
 
 const giftButton = document.getElementById("giftButton");
 const messageSection = document.getElementById("messageSection");
