@@ -670,3 +670,40 @@ footer {
 .s38{top:76%;left:9%;font-size:20px;animation-duration:5s;animation-delay:1.2000000000000002s}
 .s39{top:83%;left:22%;font-size:24px;animation-duration:6s;animation-delay:1.6s}
 .s40{top:90%;left:35%;font-size:12px;animation-duration:2s;animation-delay:2.0s}
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.confetti-piece {
+  position: absolute;
+  color: #ffffff;
+  animation: confettiFall linear forwards;
+  opacity: 0;
+}
+
+@keyframes confettiFall {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateY(0)
+      rotate(0deg)
+      scale(.5);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(110vh)
+      rotate(720deg)
+      scale(1);
+  }
+}
