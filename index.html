@@ -1,25 +1,179 @@
 <!DOCTYPE html>
-<html lang="id"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ananda Gustia</title>
-<link rel="stylesheet" href="style.css">
-</head><body>
-<div class="stars"><span class="st s1">✧</span><span class="st s2">✨</span><span class="st s3">⭐</span><span class="st s4">✦</span><span class="st s5">✧</span><span class="st s6">✨</span><span class="st s7">⭐</span><span class="st s8">✦</span><span class="st s9">✧</span><span class="st s10">✨</span><span class="st s11">⭐</span><span class="st s12">✦</span><span class="st s13">✧</span><span class="st s14">✨</span><span class="st s15">⭐</span><span class="st s16">✦</span><span class="st s17">✧</span><span class="st s18">✨</span><span class="st s19">⭐</span><span class="st s20">✦</span><span class="st s21">✧</span><span class="st s22">✨</span><span class="st s23">⭐</span><span class="st s24">✦</span><span class="st s25">✧</span><span class="st s26">✨</span><span class="st s27">⭐</span><span class="st s28">✦</span><span class="st s29">✧</span><span class="st s30">✨</span><span class="st s31">⭐</span><span class="st s32">✦</span><span class="st s33">✧</span><span class="st s34">✨</span><span class="st s35">⭐</span><span class="st s36">✦</span><span class="st s37">✧</span><span class="st s38">✨</span><span class="st s39">⭐</span><span class="st s40">✦</span></div>
-<div class="bg"></div>
-<div class="card">
-<h1>🎂 Ananda Gustia</h1>
-<p id="info"></p>
-<div id="count"></div>
-<div id="gift" class="gift">
-<div id="giftIcon">🎁</div>
-<div id="envelope" class="envelope">✉️</div>
-</div>
-<div id="letter" class="letter">
-<h2 id="title"></h2>
-<p id="typing"></p>
-<p id="thanks" style="display:none;opacity:.8;font-size:14px;margin-top:18px;">Terima kasih sudah membuka hadiah ini. 🤍</p>
-</div>
-<audio id="bgm" src="birthday.mp3"></audio>
-</div>
-<script src="script.js"></script>
-</body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="A little birthday celebration for Ananda Gustia">
+  <title>Happy Birthday, Ananda! 🎂</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid"></div>
+    <div id="stars"></div>
+  </div>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="top-badge">
+        <span class="dot"></span>
+        TODAY IS YOUR DAY
+      </div>
+
+      <div class="cake">🎂</div>
+
+      <p class="intro">A special little celebration for</p>
+
+      <h1>
+        Ananda
+        <span>Gustia</span>
+      </h1>
+
+      <p class="subtitle">
+        Hari baru, umur baru, cerita baru.<br>
+        Semoga semuanya membawa hal-hal baik. ✨
+      </p>
+
+      <div class="countdown-box">
+        <div class="countdown-label" id="status">
+          Menuju hari spesial...
+        </div>
+
+        <div class="countdown" id="countdown">
+          <div>
+            <strong id="days">00</strong>
+            <span>Hari</span>
+          </div>
+
+          <i>:</i>
+
+          <div>
+            <strong id="hours">00</strong>
+            <span>Jam</span>
+          </div>
+
+          <i>:</i>
+
+          <div>
+            <strong id="minutes">00</strong>
+            <span>Menit</span>
+          </div>
+
+          <i>:</i>
+
+          <div>
+            <strong id="seconds">00</strong>
+            <span>Detik</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="gift-button" id="giftButton">
+        <span class="gift-icon">🎁</span>
+        <span>Buka kejutan</span>
+        <span class="button-arrow">→</span>
+      </button>
+
+      <p class="hint">
+        Ada sesuatu kecil di balik tombol ini
+      </p>
+
+    </section>
+
+
+    <section class="message-section" id="messageSection">
+
+      <div class="message-card">
+
+        <div class="card-decoration decoration-1">✦</div>
+        <div class="card-decoration decoration-2">✦</div>
+
+        <div class="card-header">
+          <span>08 · 07 · 2026</span>
+          <span>✦</span>
+        </div>
+
+        <div class="message-icon">
+          🎉
+        </div>
+
+        <p class="message-eyebrow">
+          HAPPY BIRTHDAY
+        </p>
+
+        <h2 id="messageTitle">
+          Untuk Ananda
+        </h2>
+
+        <div class="divider"></div>
+
+        <div class="typed-message" id="typedMessage"></div>
+
+        <div class="final-message" id="finalMessage">
+          <span>🎈</span>
+          Semoga tahun ini menjadi salah satu tahun terbaikmu.
+          <span>🎈</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="wish-section">
+
+      <div class="wish-line"></div>
+
+      <div class="wish-content">
+        <span>✦</span>
+        <p>Make a wish.</p>
+        <span>✦</span>
+      </div>
+
+      <div class="wish-cake">
+        🕯️ 🕯️ 🕯️
+      </div>
+
+    </section>
+
+
+    <footer>
+      Made for a special day · 2026
+    </footer>
+
+  </main>
+
+
+  <button class="music-button" id="musicButton" aria-label="Putar musik">
+    <span class="music-note">♫</span>
+
+    <span class="music-bars">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </button>
+
+
+  <audio id="birthdayAudio" src="birthday.mp3" preload="auto" loop></audio>
+
+  <canvas id="confetti"></canvas>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
