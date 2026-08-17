@@ -7,6 +7,10 @@ const previewMode =
 const messageSection = document.getElementById("messageSection");
 const typedMessage = document.getElementById("typedMessage");
 const finalMessage = document.getElementById("finalMessage");
+const pageTwo = document.getElementById("pageTwo");
+const videoButton = document.getElementById("videoButton");
+const videoWrapper = document.getElementById("videoWrapper");
+const birthdayVideo = document.getElementById("birthdayVideo");
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -165,7 +169,15 @@ function typeMessage() {
       typedMessage.classList.add("done");
 
       setTimeout(() => {
+
         finalMessage.classList.add("show");
+
+        // Setelah pesan selesai dibaca, buka halaman kedua.
+        setTimeout(() => {
+          pageTwo.classList.add("show");
+          pageTwo.setAttribute("aria-hidden", "false");
+        }, 1500);
+
       }, 700);
 
       return;
@@ -226,6 +238,33 @@ giftButton.addEventListener("click", function () {
     });
 
   }, 300);
+
+});
+
+
+/* =========================
+   PAGE TWO / VIDEO
+========================= */
+
+videoButton.addEventListener("click", function () {
+
+  // Hentikan musik dari halaman pertama.
+  audio.pause();
+  audio.currentTime = 0;
+  musicButton.classList.remove("playing");
+
+  videoWrapper.classList.add("show");
+
+  birthdayVideo.play().catch(() => {
+    console.log("Video menunggu interaksi pengguna.");
+  });
+
+  setTimeout(() => {
+    videoWrapper.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }, 200);
 
 });
 
